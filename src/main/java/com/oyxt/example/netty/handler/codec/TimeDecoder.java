@@ -1,5 +1,6 @@
-package com.oyxt.example.netty.handler.decode;
+package com.oyxt.example.netty.handler.codec;
 
+import com.oyxt.example.netty.bean.UnixTime;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;
@@ -17,6 +18,6 @@ public class TimeDecoder extends ByteToMessageDecoder {
             return;
         }
 
-        out.add(in.readBytes(4));
+        out.add(new UnixTime(in.readUnsignedInt()));
     }
 }

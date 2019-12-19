@@ -1,7 +1,7 @@
 package com.oyxt.example.netty.client;
 
 import com.oyxt.example.netty.handler.client.TimeClientHandler;
-import com.oyxt.example.netty.handler.decode.TimeDecoder;
+import com.oyxt.example.netty.handler.codec.TimeDecoder;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
